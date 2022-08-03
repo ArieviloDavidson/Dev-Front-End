@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&family=Sarala&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    font-size: 100%;
+    background: linear-gradient(68.15deg, #303030 16.62%, #707070 85.61%);
+}
+
+.cabecalho{
+    display: flex;
+
+}
+
+.cabecalho-imagem{
+    width: 10%;
+    height: 10%;
+}
