@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário de Contato</title>
+    <style>
+      * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: #888;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .form {
+    width: 100%;
+    max-width: 32rem;
+    font-size: 1.125rem;
+  }
+  
+  .form input,
+  .form button {
+    display: block;
+    width: 100%;
+  }
+  
+  .form input,
+  .form textarea {
+    font: inherit;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    transition: border-color, box-shadow 0.2s;
+  }
+  
+  .form textarea {
+    min-height: 13rem;
+    resize: vertical;
+  }
+  
+  .form button {
+    display: block;
+    padding: 1rem;
+    background: yellow;
+    color: #000;
+    font: inherit;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  .form button:hover,
+  .form button:focus {
+    outline: none;
+    transform: scale(1.1);
+  }
+    </style>
+  </head>
+  <body>
+    <form
+      action="https://formsubmit.co/Contatomapassessoria@gmail.com"
+      method="POST"
+      class="form"
+    >
+      <input type="text" name="name" id="name" placeholder="Digite seu nome" required />
+      <input type="email" name="email" id="email" placeholder="Digite seu email" required />
+      <input type="hidden" name="_captcha" value="false" />
+      <input
+        type="hidden"
+        name="_next"
+        value="https://contatomapassessoria.kpages.online/obrigado"
+      />
+      <button type="submit">Baixe Agora</button>
+    </form>
+  </body>
+</html>
