@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+main {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 12vh;
+}
+
+section {
+    width: 80%;
+    height: 95vh;
+    padding: 10vh;
+}
+
+#home {
+    background-color: yellow;
+}
+#sobrenos{
+    background-color: red;
+}
+#servicos {
+    background-color: rgb(0, 255, 149);
+}
+#galeria {
+    background-color: rgb(255, 0, 221);
+}
+#contato {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+}
+
+@media screen and (max-width: 900px) {
+    #contato {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.contactContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    
+}
+
+.contactContentBox {
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: space-around;
+    width: 70%;
+    height: 20%;
+    margin-bottom: 30px;
+    /* background-color: red; */
+}
+
+.icons {
+    /* display: flex;
+    justify-content: center; */
+    /* background-color: green; */
+}
+
+
+header {
+    width: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15%;
+    height: 10vh;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    background-color: green;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navigator {
+    width: 50vw;
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+li {
+    list-style-type: none;
+    width: 100%;
+}
+
+.submitionForms {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.inputForm {
+    width: 25vw;
+    height: 25px;
+    border-radius: 3px;
+    border: none;
+    margin-top: 20px;
+    background-color: rgb(211, 206, 206);
+    padding: 5px;
+
+
+}
+
+.textareaForm{
+    width: 25vw;
+    height: 50px;
+    border-radius: 3px;
+    margin-top: 20px;
+    background-color: rgb(211, 206, 206);
+    padding: 5px;
+    border: none;
+}
+
+.inputForm:focus, .textareaForm:focus {
+    outline: 0;
+}
+.sendButton {
+    width: 100px;
+    height: 50px;
+    margin-top: 20px;
+    border-radius: 3px;
+    background-color: rgb(211, 206, 206);
+    border: none;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 40px 0px;
+    background-color: green;
+}
+
