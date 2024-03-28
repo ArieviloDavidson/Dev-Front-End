@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiência REFIPA</title>
+<link rel="shortcut icon" type="imagex/png" href="./imgs/logo refipa.png">
+<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <div class="tela4">
+        <div class="text-tela4">25.05</div>
+        <div class="contagem"></div>
+    </div>
+
+    <script>
+        // Define a data de término da contagem regressiva
+        const dataFinal = new Date("2024-04-07T00:00:00").getTime();
+    
+        // Função para atualizar a contagem regressiva a cada segundo
+    const atualizarContagemRegressiva = () => {
+        const agora = new Date().getTime();
+        const diferenca = dataFinal - agora;
+    
+        // Calcula dias, horas, minutos e segundos
+        const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+        const horas = Math.floor((diferenca % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutos = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60));
+        const segundos = Math.floor((diferenca % (1000 * 60)) / 1000);
+    
+        // Atualiza o conteúdo da div com a classe 'contagem'
+        const contagem = document.querySelector('.contagem');
+        contagem.innerHTML = `
+        <div class="dias">
+            <div><b>${dias}</b></div>
+            <div><p>dias</p></div>
+        </div>
+        <div class="horas">
+            <div><b>${horas}</b></div>
+            <div><p>horas</p></div>
+        </div>
+        <div class="minutos">
+            <div><b>${minutos}</b></div>
+            <div><p>minutos</p></div>
+        </div>
+        <div class="segundos">
+            <div><b>${segundos}</b></div>
+            <div><p>segundos</p></div>
+        </div>
+        `; 
+    
+        // O que fazer quando a contagem regressiva terminar
+        if (diferenca < 0) {
+            clearInterval(intervalo);
+            contagem.innerHTML = "A contagem regressiva terminou!";
+        }
+    };
+    
+    // Atualiza a contagem regressiva imediatamente (não esperar 1 segundo para a primeira atualização)
+    atualizarContagemRegressiva();
+    
+    // Atualiza a contagem regressiva a cada segundo
+    const intervalo = setInterval(atualizarContagemRegressiva, 1000);
+    
+    </script>
+
+</body>
+</html>
