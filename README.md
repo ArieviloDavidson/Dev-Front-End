@@ -39,3 +39,5 @@ Bom vamos codar!
 - Google Formulários
 
     Para entrar em contato com os organizadores de forma prática e simples integramos um formulário direto do google, onde podemos tirar as dúvidas e fazer suporte também.
+
+Este projeto além de ser particularmente especial me permitiu estudar integrações diferentes, atributos diferentes de estilização (CSS) e manipulação de dados com JAVASCRIPT (que inclusive foi algo diferente para mim pois tenho o costume de fazer em python).
