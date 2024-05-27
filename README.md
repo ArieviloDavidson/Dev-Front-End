@@ -4,7 +4,7 @@
 
 <div style="display: flex width: 100%" align="center">
 <img align="center" src="./Site REFIPA RJ/imgs/logo refipa.png"></img>
-</div>
+</div><br>
 
 É com muito prazer que inicio esta documentação, pois este projeto tem um espaço enorme em meu coração!
 
