@@ -2,4 +2,6 @@
 
 ### SITE REFIPA RJ
 
-<img src="./Site REFIPA RJ/imgs/logo refipa.png"></img>
+<div>
+<img align="center" src="./Site REFIPA RJ/imgs/logo refipa.png"></img>
+</div>
