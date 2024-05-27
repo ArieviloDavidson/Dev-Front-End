@@ -20,10 +20,22 @@ Bom vamos codar!
 
 - FRONT-END
 
-Para o front-end utilizei HTML, CSS e JAVASCRIPT e vou detalhar alguns pontos das duas páginas que fazem parte desse projeto.
+    Para o front-end utilizei HTML, CSS e JAVASCRIPT e vou detalhar alguns pontos das duas páginas que fazem parte desse projeto.
 
-No cabeçalho linkei cada ID/Classe com a parte respectiva da página (Sobre, Contato, Local).
+    No cabeçalho linkei cada ID/Classe com a parte respectiva da página (Sobre, Contato, Local).
 
-Fiz uma contagem regressiva para a data do evento utilizando JS e retornando as divs referenciais com as variáveis através de um innerHTML.
+    Fiz uma contagem regressiva para a data do evento utilizando JS e retornando as divs referenciais com as variáveis através de um innerHTML.
 
-Forms: A captação de dados dos inscritos que alimentará a base de dados foi feita com a tag "form" linkada ao Google Planilhas o que nós leva a nossa primeira integração.
+    Forms: A captação de dados dos inscritos que alimentará a base de dados foi feita com a tag "form" linkada ao Google Planilhas o que nós leva a nossa primeira integração.
+
+- App Script
+
+    Utilizado para linkar o form da página junto com o JS com a planilha de dados, levando informações como nome, telefone, tamanho de camisa, email entre outros para ela, onde os organizadores podem utilizar os dados para contactar os incritos, fazer envio de documentos.
+
+- Google Maps
+
+    Fiz uma integração da localização do evento com a API do MAPS, funciona exatamente como o site do maps dentro de uma outra página.
+
+- Google Formulários
+
+    Para entrar em contato com os organizadores de forma prática e simples integramos um formulário direto do google, onde podemos tirar as dúvidas e fazer suporte também.
