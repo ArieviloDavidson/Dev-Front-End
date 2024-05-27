@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REFIPA 2k24</title>
+    <link rel="shortcut icon" type="imagex/png" href="./imgs/logo refipa.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js"></script>
+</head>
+<body onmousemove="globalOpacity()">
+    <header id="header" class="cabecalho">
+        <div class="containerh">
+            <a href="./index.html"><h1>REFIPA 2k24</h1></a>
+            <a href="#inscricao"><button type="button" class="botao-header">INSCRIÇÕES</button></a>
+        </div>
+    </header>
+    <main id="main">
+        <img src="./imgs/imagem site.png" alt="fundo" class="fundo">
+        <div class="contagem"></div>
+    </main>
+
+    <!-- CONTAGEM REGRESSIVA -->
+
+    <script>
+        // Define a data de término da contagem regressiva
+        const dataFinal = new Date("2024-10-25T00:00:00").getTime();
+
+        // Função para atualizar a contagem regressiva a cada segundo
+        const atualizarContagemRegressiva = () => {
+            const agora = new Date().getTime();
+            const diferenca = dataFinal - agora;
+
+            // Calcula dias, horas, minutos e segundos
+            const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+            const horas = Math.floor((diferenca % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutos = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60));
+            const segundos = Math.floor((diferenca % (1000 * 60)) / 1000);
+
+            // Atualiza o conteúdo da div com a classe 'contagem'
+            const contagem = document.querySelector('.contagem');
+            contagem.innerHTML = `
+            <div class="dias">
+                <div><b>${dias}</b></div>
+                <div><p>Dias</p></div>
+            </div>
+            <div class="horas">
+                <div><b>${horas}</b></div>
+                <div><p>Horas</p></div>
+            </div>
+            <div class="minutos">
+                <div><b>${minutos}</b></div>
+                <div><p>Min</p></div>
+            </div>
+            <div class="segundos">
+                <div><b>${segundos}</b></div>
+                <div><p>Seg</p></div>
+            </div>
+            `; 
+
+            // O que fazer quando a contagem regressiva terminar
+            if (diferenca < 0) {
+                clearInterval(intervalo);
+                contagem.innerHTML = "A contagem regressiva terminou!";
+            }
+        };
+
+        // Atualiza a contagem regressiva imediatamente (não esperar 1 segundo para a primeira atualização)
+        atualizarContagemRegressiva();
+
+        // Atualiza a contagem regressiva a cada segundo
+        const intervalo = setInterval(atualizarContagemRegressiva, 1000);
+    </script>
+
+    <div class="main-inscricao">
+        <div id="inscricao" class="inscricao">
+            <div class="text-inscricao">
+                <h1><img src="./imgs/exclamation_545684.svg" alt="exclamação">Instruções</h1>
+                <p>Olá, FIPA!</p>
+                <p>Aqui estão algumas instruções para realizar sua inscrição:</p>
+                <p>Este ano, temos nosso próprio site de inscrições (\o/). Se encontrar qualquer erro ou tiver dúvidas, envie um e-mail para <i>refiparj@gmail.com</i> ou entre em contato pelo Whatsapp com o telefone <i>(21) 98583-5760</i>.</p>
+                <p>Preencha os campos ao lado somente quando tiver certeza de que realizará o pagamento da inscrição!
+                </p>
+                <p>PAGAMENTO: Ao clicar no link abaixo, você será redirecionado para a página de pagamentos do Mercado Pago. Lá, você poderá escolher entre várias opções de pagamento, como PIX, cartão de crédito parcelado (com juros), boleto e outros métodos. Após confirmar o pagamento, envie o comprovante para o e-mail refiparj@gmail.com, juntamente com o nome do inscrito, para que possamos confirmar sua inscrição.</p>
+                <p><b>Caso sua opção de pagamento seja o PIX, realize através da chave <i>refiparj@gmail.com .</i></b></p>
+                <p>Esperamos ver você em breve no REFIPA 2K24!</p>
+                <p><b>LINK PROMOCIONAL!!!!!</b></p>
+            </div>
+            <button class="botao-pagamento">Pagar</button>
+        </div>
+    
+        <div class="formulario">
+            <h1>Formulário de Inscrição</h1>
+            <form id="form">
+                <div class="parteum">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+    
+                    <label for="idade">Idade:</label>
+                    <input type="number" id="idade" name="idade" required>
+    
+                    <label for="igreja">Qual Igreja você pertence:</label>
+                    <input type="text" id="igreja" name="igreja" required>
+    
+                    <label for="camisa">Tamanho da Camisa:</label>
+                    <select id="camisa" name="camisa" required>
+                        <option value="P">P</option>
+                        <option value="M">M</option>
+                        <option value="G">G</option>
+                        <option value="GG">GG</option>
+                    </select>
+    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+    
+                <div class="partedois">
+                    <label for="contato">Contato:</label>
+                    <input type="text" id="contato" name="contato" required>
+    
+                    <label for="documento">Documento (RG ou CPF):</label>
+                    <input type="text" id="documento" name="documento" required>
+
+                    <label for="nomeResponsavel">Nome do Responsável:</label>
+                    <input type="text" id="nomeResponsavel" name="nomeResponsavel">
+    
+                    <label for="contatoResponsavel">Contato do Responsável:</label>
+                    <input type="text" id="contatoResponsavel" name="contatoResponsavel">
+    
+                    <button class="botao-enviar" type="submit">Enviar</button>
+                </div>
+            </form>
+    
+            <script>
+                document.getElementById('form').addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    
+                    const formData = new FormData(event.target);
+                    const data = {
+                        nome: formData.get('nome'),
+                        idade: formData.get('idade'),
+                        igreja: formData.get('igreja'),
+                        camisa: formData.get('camisa'),
+                        email: formData.get('email'),
+                        contato: formData.get('contato'),
+                        documento: formData.get('documento'),
+                        nomeResponsavel: formData.get('nomeResponsavel') || '',
+                        contatoResponsavel: formData.get('contatoResponsavel') || ''
+                    };
+    
+                    fetch('https://script.google.com/macros/s/AKfycbxax0RthGKeMAv_HV9krcALeoOCRP2SjFcMH2gawHbESzU-L3Rei-jHQtiNg-HwtR3j/exec', {
+                        method: 'POST',
+                        body: JSON.stringify(data)
+                    })
+                    .then(response => response.json())
+                    .then(result => {
+                        if (result.status === 'success') {
+                            alert('Dados enviados com sucesso!');
+                            event.target.reset();
+                        } else {
+                            alert('Falha ao enviar os dados.');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Erro:', error);
+                        alert('Erro ao enviar os dados.');
+                    });
+                });
+            </script>
+        </div>
+    </div>
+
+    <!-- https://script.google.com/macros/s/AKfycbxax0RthGKeMAv_HV9krcALeoOCRP2SjFcMH2gawHbESzU-L3Rei-jHQtiNg-HwtR3j/exec -->
+
+    <footer>
+        Todos os direitos reservados © REFIPA RJ
+    </footer>
+
+</body>
+</html>
