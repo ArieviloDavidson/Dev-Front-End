@@ -81,12 +81,24 @@
                 <p>Este ano, temos nosso próprio site de inscrições (\o/). Se encontrar qualquer erro ou tiver dúvidas, envie um e-mail para <i>refiparj@gmail.com</i> ou entre em contato pelo Whatsapp com o telefone <i>(21) 98583-5760</i>.</p>
                 <p>Preencha os campos ao lado somente quando tiver certeza de que realizará o pagamento da inscrição!
                 </p>
+                <!-- <p>Caso vá fazer a inscrição de <b>FAMÍLIA</b> faça cada uma separadamente pelo link Família.
+                </p> -->
                 <p>PAGAMENTO: Ao clicar no link abaixo, você será redirecionado para a página de pagamentos do Mercado Pago. Lá, você poderá escolher entre várias opções de pagamento, como PIX, cartão de crédito parcelado (com juros), boleto e outros métodos. Após confirmar o pagamento, envie o comprovante para o e-mail refiparj@gmail.com, juntamente com o nome do inscrito, para que possamos confirmar sua inscrição.</p>
                 <p><b>Caso sua opção de pagamento seja o PIX, realize através da chave <i>refiparj@gmail.com .</i></b></p>
                 <p>Esperamos ver você em breve no REFIPA 2K24!</p>
                 <p><b>LINK PROMOCIONAL!!!!!</b></p>
+                <script src="https://www.mercadopago.com.br/integrations/v1/web-payment-checkout.js"
+                    data-preference-id="1797945285-75571ab0-7e93-4930-81f3-6f226cf55d87" data-source="button">
+                </script>
+                <!-- <p><b>LINK SIMPLES!!!!!</b></p>
+                <script src="https://www.mercadopago.com.br/integrations/v1/web-payment-checkout.js"
+                    data-preference-id="1797945285-8ab16db4-124e-460e-8acd-ec80333f5a0d" data-source="button">
+                </script>
+                <p><b>LINK FAMÍLIA!!!!!</b></p>
+                <script src="https://www.mercadopago.com.br/integrations/v1/web-payment-checkout.js"
+                    data-preference-id="1797945285-23540df3-e136-46ba-9331-9aefa9fac050" data-source="button">
+                </script> -->
             </div>
-            <button class="botao-pagamento">Pagar</button>
         </div>
     
         <div class="formulario">
@@ -148,7 +160,7 @@
                         contatoResponsavel: formData.get('contatoResponsavel') || ''
                     };
     
-                    fetch('https://script.google.com/macros/s/AKfycbxax0RthGKeMAv_HV9krcALeoOCRP2SjFcMH2gawHbESzU-L3Rei-jHQtiNg-HwtR3j/exec', {
+                    fetch('https://script.google.com/macros/s/AKfycbzXSQZTeOq5YawIdqZXB59wGrlXE8t3RfZVqRPtd7FBfJU5spE44eypOJWLkASI9fAa/exec', {
                         method: 'POST',
                         body: JSON.stringify(data)
                     })
@@ -170,7 +182,7 @@
         </div>
     </div>
 
-    <!-- https://script.google.com/macros/s/AKfycbxax0RthGKeMAv_HV9krcALeoOCRP2SjFcMH2gawHbESzU-L3Rei-jHQtiNg-HwtR3j/exec -->
+    <!-- https://script.google.com/macros/s/AKfycbzXSQZTeOq5YawIdqZXB59wGrlXE8t3RfZVqRPtd7FBfJU5spE44eypOJWLkASI9fAa/exec -->
 
     <footer>
         Todos os direitos reservados © REFIPA RJ
