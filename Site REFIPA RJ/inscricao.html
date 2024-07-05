@@ -87,17 +87,6 @@
                 <p><b>Caso sua opção de pagamento seja o PIX, realize através da chave <i>refiparj@gmail.com .</i></b></p>
                 <p>Esperamos ver você em breve no REFIPA 2K24!</p>
                 <p><b>LINK PROMOCIONAL!!!!!</b></p>
-                <script src="https://www.mercadopago.com.br/integrations/v1/web-payment-checkout.js"
-                    data-preference-id="1797945285-75571ab0-7e93-4930-81f3-6f226cf55d87" data-source="button">
-                </script>
-                <!-- <p><b>LINK SIMPLES!!!!!</b></p>
-                <script src="https://www.mercadopago.com.br/integrations/v1/web-payment-checkout.js"
-                    data-preference-id="1797945285-8ab16db4-124e-460e-8acd-ec80333f5a0d" data-source="button">
-                </script>
-                <p><b>LINK FAMÍLIA!!!!!</b></p>
-                <script src="https://www.mercadopago.com.br/integrations/v1/web-payment-checkout.js"
-                    data-preference-id="1797945285-23540df3-e136-46ba-9331-9aefa9fac050" data-source="button">
-                </script> -->
             </div>
         </div>
     
@@ -145,44 +134,11 @@
     
             <script>
                 document.getElementById('form').addEventListener('submit', function(event) {
-                    event.preventDefault();
-                    
-                    const formData = new FormData(event.target);
-                    const data = {
-                        nome: formData.get('nome'),
-                        idade: formData.get('idade'),
-                        igreja: formData.get('igreja'),
-                        camisa: formData.get('camisa'),
-                        email: formData.get('email'),
-                        contato: formData.get('contato'),
-                        documento: formData.get('documento'),
-                        nomeResponsavel: formData.get('nomeResponsavel') || '',
-                        contatoResponsavel: formData.get('contatoResponsavel') || ''
-                    };
-    
-                    fetch('https://script.google.com/macros/s/AKfycbzXSQZTeOq5YawIdqZXB59wGrlXE8t3RfZVqRPtd7FBfJU5spE44eypOJWLkASI9fAa/exec', {
-                        method: 'POST',
-                        body: JSON.stringify(data)
-                    })
-                    .then(response => response.json())
-                    .then(result => {
-                        if (result.status === 'success') {
-                            alert('Dados enviados com sucesso!');
-                            event.target.reset();
-                        } else {
-                            alert('Falha ao enviar os dados.');
-                        }
-                    })
-                    .catch(error => {
-                        console.error('Erro:', error);
-                        alert('Erro ao enviar os dados.');
-                    });
+                    alert('Teste concluído com sucesso!');
                 });
             </script>
         </div>
     </div>
-
-    <!-- https://script.google.com/macros/s/AKfycbzXSQZTeOq5YawIdqZXB59wGrlXE8t3RfZVqRPtd7FBfJU5spE44eypOJWLkASI9fAa/exec -->
 
     <footer>
         Todos os direitos reservados © REFIPA RJ
